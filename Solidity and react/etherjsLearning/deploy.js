@@ -24,7 +24,12 @@ async function main() {
 
   console.log("Delploying contact wait....");
   const contract = await contractFractory.deploy();
-  console.log(contract);
+  //   console.log(contract);
+
+  await contract.increment();
+
+  const count = await contract.getCount();
+  console.log(count.toString());
 }
 
 main()
