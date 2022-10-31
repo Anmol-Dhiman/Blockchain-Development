@@ -1,0 +1,5 @@
+# we have add those files/folder name here which we want to be ignore while
+# working with vcs
+
+# .env
+# node_module
