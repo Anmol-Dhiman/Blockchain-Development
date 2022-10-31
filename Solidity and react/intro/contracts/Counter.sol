@@ -20,7 +20,7 @@ function increment() public{
 
 // constructor
     constructor() {
-        count =0;
+        count = 0;
     }
 
 
