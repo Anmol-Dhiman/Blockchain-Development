@@ -1,0 +1,11 @@
+to compile the smart contract 
+1. npx hardhat compile
+
+
+to deploye the smart contract 
+2. npx hardhat run 
+
+3. hardhat have its own network just like ganache
+
+4. to deploye on different network : - 
+ npx hardhat run .\scripts\deploy.js --network hardhat
