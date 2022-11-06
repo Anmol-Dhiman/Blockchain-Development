@@ -14,6 +14,8 @@ async function main() {
   console.log(counter.address);
 }
 
+async function verify(contractAddress, args) {}
+
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main().catch((error) => {

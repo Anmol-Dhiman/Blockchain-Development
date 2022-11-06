@@ -9,3 +9,6 @@ to deploye the smart contract
 
 4. to deploye on different network : - 
  npx hardhat run .\scripts\deploy.js --network hardhat
+
+5. plugin to verify the contract: - 
+npm install --save-dev @nomiclabs/hardhat-etherscan
