@@ -11,7 +11,7 @@ contract Outputs {
     function nameReturn() public pure returns (uint x, bool b) {
         return (1, true);
     }
-
+f
     // 21499
     function valueReturn() public pure returns (uint x, bool b) {
         x = 1;
