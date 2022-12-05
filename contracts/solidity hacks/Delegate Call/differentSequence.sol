@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// PREVENTION : - Use stateless Library
+
 contract A {
     address public other;
     address public owner;

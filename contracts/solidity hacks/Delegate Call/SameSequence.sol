@@ -7,6 +7,8 @@ pragma solidity ^0.8.0;
 // and after this , if we make a deligatecall from A -> B
 // then we can change the state of A using the state variables of B
 
+// PREVENTION : - Use stateless Library
+
 contract A {
     address public owner;
     B public otherContract;
