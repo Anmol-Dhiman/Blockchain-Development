@@ -38,3 +38,29 @@ contract Attack {
         village.throne{value: msg.value}();
     }
 }
+
+contract SecuredVillage {
+    address public king;
+    uint public balance;
+    mapping(address => uint) withDrawAbleBalance;
+
+    function throne() public payable {
+        require(msg.value > balance, "send more ehter to get the throne");
+
+        withDrawAbleBalance[msg.sender] = balance;
+
+        king = msg.sender;
+        balance = msg.value;
+    }
+
+    // here we have to first update the data then send the ether to user to prevent from reentrancy
+    function withDrawAmount() public payable {
+        require(msg.sender != king, "Current king cannot withdraw");
+
+        uint amount = withDrawAbleBalance[msg.sender];
+        withDrawAbleBalance[msg.sender] = 0;
+
+        (bool send, ) = msg.sender.call{value: amount}("");
+        require(send, "Failed to send the money!!");
+    }
+}
